@@ -1,20 +1,16 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Textarea from './Textarea'
+import { myContext } from '../context'
+import Preview from './Preview'
 function MainFile({ active }) {
-    const apple = <div>
-        Apple
-    </div>
-    const orange = <div>
-        Orange
-    </div>
-    const banana = <div>
-        Banana
-    </div>
+    const { data } = useContext(myContext)
+    if (active === 'preview') localStorage.setItem('data', JSON.stringify(data))
     return (
         <div
             className='layout__main'>
-            <Textarea name={active} />
+            {active === 'preview' ? <Preview /> : <Textarea name={active} />}
+
         </div>
     )
 }

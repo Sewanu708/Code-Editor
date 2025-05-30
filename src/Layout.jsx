@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import MainFile from './components/MainFile'
 import { motion } from 'framer-motion'
 function Layout() {
-    const [active, setActive] = useState('apple')
+    const [active, setActive] = useState('html')
     const tabs = [
         { id: 'html', label: 'HTML' },
         { id: 'css', label: ' CSS' },
