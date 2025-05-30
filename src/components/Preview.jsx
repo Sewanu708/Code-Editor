@@ -21,11 +21,18 @@ function Preview() {
     
   }, [data])
   return (
-    <div>
-      <iframe ref={preview} height='610' style={{border:'none'}} width='80%'>
+  <div style={{ height: '85%', width: '100%', display: 'flex', justifyContent: 'center' }}>
+  <iframe
+    ref={preview}
+    style={{
+      border: 'none',
+      width: '80%',
+      height: '100%',
+    }}
+    title="Preview"
+  />
+</div>
 
-      </iframe>
-    </div>
   )
 }
 
